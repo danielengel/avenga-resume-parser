@@ -1,4 +1,4 @@
-package com.resume.parser;
+package com.resume.parser.service;
 
 import static gate.Utils.stringFor;
 

@@ -106,3 +106,10 @@ curl --request POST 'http://localhost:8081/upload' \
 #### Library References
 - GATE (https://gate.ac.uk/) - Open source language processing framework.
 
+### Docker shortcuts
+
+docker stop engeld
+docker rm engeld
+
+docker build -t engeld/resume-parser .
+docker run --name engeld -p 8080:8080 -t engeld/bbb
