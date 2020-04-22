@@ -13,9 +13,9 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
-        <jdk.version>1.8</jdk.version>
+        <jdk.version>11</jdk.version>
         <tika.version>1.17</tika.version>
-        <jquery.version>3.4.1</jquery.version>
+        <jquery.version>3.0.0</jquery.version>
         <bootstrap.version>4.4.1</bootstrap.version>
 
     </properties>
@@ -44,10 +44,6 @@
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-parsers</artifactId>
             <version>${tika.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

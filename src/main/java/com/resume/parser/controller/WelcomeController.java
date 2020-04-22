@@ -1,5 +1,6 @@
 package com.resume.parser.controller;
 
+import com.google.gson.JsonObject;
 import com.resume.parser.service.ParserService;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,11 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class WelcomeController {
 
-    @Autowired
-    private ParserService parserService;
+    private final ParserService parserService;
+
+    public WelcomeController(ParserService parserService) {
+        this.parserService = parserService;
+    }
 
     @GetMapping("/")
     public String main(Model model) {
@@ -22,9 +26,9 @@ public class WelcomeController {
     }
 
     @PostMapping("/")
-    public String mainWithParam(@RequestParam MultipartFile resume, Model model) {
+    public String mainWithParam(@RequestParam MultipartFile resume, Model model) throws Exception {
 
-        JSONObject parsedResume = parserService.parseResume(resume);
+        JsonObject parsedResume = parserService.parseResume(resume);
 
         model.addAttribute("parsedResume", parsedResume);
 

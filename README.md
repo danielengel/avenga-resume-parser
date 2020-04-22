@@ -111,5 +111,7 @@ curl --request POST 'http://localhost:8081/upload' \
 docker stop engeld
 docker rm engeld
 
-docker build -t engeld/resume-parser .
-docker run --name engeld -p 8080:8080 -t engeld/bbb
+docker build -t danielengel/avenga-resume-parser .
+docker run --name app -p 8080:8080 -t danielengel/avenga-resume-parser
+
+docker run --name app -p 80:8080 -d -t danielengel/avenga-resume-parser
