@@ -3,7 +3,6 @@ package com.resume.parser.service;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import gate.*;
-import gate.util.Out;
 import org.apache.commons.lang.StringUtils;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.AutoDetectParser;
@@ -49,7 +48,6 @@ public class ParserService {
 
         Iterator<Document> iter = corpus.iterator();
         JsonObject parsedJSON = new JsonObject();
-        Out.prln("Started parsing...");
         if (iter.hasNext()) {
             JsonObject profileJSON = new JsonObject();
             Document doc = iter.next();
