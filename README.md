@@ -5,6 +5,10 @@ A Java Spring Boot based Resume Parser API using GATE library.
 Works well with any type of CV (PDF, HTML, DOC, DOCX, RTF, TXT) or LinkedIn Profile Document. 
 Can extract all types of useful information correctly in English.
 
+#### Origin project
+
+https://github.com/antonydeepak/ResumeParser
+
 #### Build
 ```
 mvn clean install
@@ -106,12 +110,3 @@ curl --request POST 'http://localhost:8081/upload' \
 #### Library References
 - GATE (https://gate.ac.uk/) - Open source language processing framework.
 
-### Docker shortcuts
-
-docker stop engeld
-docker rm engeld
-
-docker build -t danielengel/avenga-resume-parser .
-docker run --name app -p 8080:8080 -t danielengel/avenga-resume-parser
-
-docker run --name app -p 80:8080 -d -t danielengel/avenga-resume-parser
